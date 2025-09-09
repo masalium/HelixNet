@@ -1,0 +1,28 @@
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "protein-structure-cnn"
+version = "0.1.0"
+description = "CNN for protein secondary structure prediction (Q3) from amino-acid sequences."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT License"}
+authors = [{name = "Your Name"}]
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "seaborn",
+    "scikit-learn",
+    "tensorflow",
+    "pytest"
+]
+
+[project.scripts]
+protein-cnn = "protein_cnn.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
